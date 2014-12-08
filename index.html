@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+ 
+<html lang="es">
+ 
+<head>
+<title>Titulo de la web</title>
+<meta charset="utf-8" />
+ <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<link rel="stylesheet" href="css/estilos.css" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link href='http://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/jquery-ui.css" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/App.js"></script>
+<script type="text/javascript" src="js/Nota.js"></script>
+<script type="text/javascript" src="js/handlebars-v1.1.2.js"></script>
+
+</head>
+ 
+<body>
+    <!-- DEFINIENDO PLANTILLA HADLEBARS JS -->
+    <script id="plantilla-nota" type="text/x-handlebars-template">
+        <div class="nota" id={{id}}> 
+            <a class="x ocultar">x<a/>
+            <textarea>{{contenido}}</textarea> 
+         </div>
+    </script>
+
+    <script id="plantilla-colores" type="text/x-handlebars-template">
+        <img src=img/color.png class='colores ocultar'> 
+        <div class=selColores>
+            <div class=blanco></div> 
+            <div class=verde></div> 
+            <div class=amarillo></div>
+            <div class=azul></div>
+            <div class=rojo></div> 
+            <div class=naranja></div>  
+   
+        </div>
+    </script>
+
+    <script id="plantilla-notas" type="text/x-handlebars-template">
+        <ul>
+       {{#each this}}
+        <div class="nota" id={{id}}> 
+            <a class="x">x<a/>
+            <textarea>{{contenido}}</textarea> 
+         </div>
+        {{/each}}
+        </ul>
+    </script>
+    <!-- END  Templates-HADLEBARS JS -->
+
+    <header>
+    	&nbsp;&nbsp;<a href="#" id="btnCrear">crear nota <img src="img/nota.png" width="30px" height="30px"></a> &nbsp;&nbsp;
+   
+        <a href="#" id="btnPrueba">tamaño array</a> &nbsp;&nbsp;
+        <div class="colorFondo amarillo"></div>
+        <div class="colorFondo verde"></div>
+        <div class="colorFondo rojo"></div>
+        <div class="colorFondo azulF"></div>
+        <div class="colorFondo naranja"></div>
+        <div class="colorFondo  estilo estilo1 blanco"></div>
+        <div class="colorFondo  estilo estilo2 blanco"></div>
+        <div class="colorFondo  estilo estilo3 blanco"></div>
+        <div class="colorFondo  estilo estilo4 blanco"></div>
+        <div class="colorFondo  estilo estilo5 blanco"></div>
+        <div class="colorFondo  estilo estilo6 blanco"></div>
+    </header>
+
+    <div id="contenedorNotas">
+    	<!--<div class="nota">
+    		<textarea>alejandro</textarea>
+    	</div>-->
+    </div>
+
+
+</body>
+</html>
+
+
